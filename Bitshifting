@@ -1,4 +1,4 @@
-package bitshifting;
+
 
 public class Zerofilling {
 	public static void main(String[] args){
