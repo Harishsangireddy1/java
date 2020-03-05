@@ -1,0 +1,58 @@
+package Myexception;
+import java.util.Scanner;
+import java.io.IOException;
+
+class Myexception extends Exception
+{
+	Myexception()
+	{
+		System.out.println("My own exception created");
+			
+	}
+}
+
+public class Divivdewithcare {
+
+	public static void main(String[] args) throws IOException {
+		
+		int a,b,c=0;
+		
+		/*a=Integer.parseInt(args[0]);
+		b=Integer.parseInt(args[1]);*/
+			Scanner sc=new Scanner(System.in);
+			try{
+			System.out.println("Enter 1st num:");
+			a=sc.nextInt();
+			
+			System.out.println("Enter 2nd num:");
+			b=sc.nextInt();
+
+			c=a/b;
+			}catch(ArithmeticException ae)
+			{
+				System.out.println("we cannot divide any number vth 0");
+			}catch(NumberFormatException ne)
+			{
+				System.out.println("Only num required,not alphabet");
+			}catch(Exception e)
+			{
+				try
+				{
+					throw new Myexception();
+					
+				}catch(Exception ex)
+				{
+					System.out.println("Cannot handle");
+					
+				}
+			}
+			finally
+			{
+				sc.close();
+				System.out.println("finlly block executed");
+			}	
+		System.out.println("Result="+c);
+		
+		
+	}
+}
