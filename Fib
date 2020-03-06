@@ -1,0 +1,47 @@
+ class Threaddemo extends Thread
+{
+   Threaddemo()
+   {
+
+   }
+   public void run()
+   {
+
+        int n1=0;
+        int n2=1;
+        int n=7;
+        int c;
+        System.out.print( n1+" "+n2 );
+        System.out.println();
+     	for(int i=1;i<=7;i++)
+     	{
+	
+         	c=n1+n2;
+
+         	n1=n2;
+
+        	 n2=c;
+
+         	System.out.print(" "+c);
+
+        }
+
+   }
+
+}
+public class Fib
+{
+
+  public static void main(String args[])
+	{
+
+         Threaddemo td=new Threaddemo();
+
+         td.setName("Fibinoci");
+
+         td.run();
+
+       }
+}
+
+     
