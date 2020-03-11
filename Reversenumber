@@ -1,0 +1,22 @@
+package cmd;
+
+public class Name {
+	public static void main(String args[]) {
+	try{
+	{
+		System.out.println("Enter name:"+args[0]);
+	}
+	}catch(ArrayIndexOutOfBoundsException ae){
+	System.out.println("name Rohit");
+	}
+	StringBuffer sb = new StringBuffer(args[0]);
+	if(args[0].equals(sb.reverse().toString()))
+	{
+		System.out.println("HELLO");
+	}
+	else 
+	{
+		System.out.println("Not an luckyuser");
+	}
+	}
+}
