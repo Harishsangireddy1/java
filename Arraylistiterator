@@ -1,13 +1,47 @@
-package cmd;
+	package cmd;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Vector;
 
 public class Arraylist {
 	public static void main(String[] args)
 	{
 		//create hetrogeneous collection
 		List listOfObjects=new ArrayList();
+		
+		List<Integer> ranklist=new ArrayList();
+	
+		Vector<String> departmentList=new Vector(); 
+		//add ranks to ranklists
+		ranklist.add(432);
+		ranklist.add(7);
+		ranklist.add(987);
+		ranklist.add(433);
+		ranklist.add(0321);
+		
+		//display rank
+		for(Integer rank : ranklist)
+		{
+			System.out.println(rank);
+		}
+		//show the rank list in sorting order
+		Collections.sort(ranklist);
+		
+		System.out.println("After sorting,"+ranklist);
+		//add departrments
+		departmentList.addElement("Operations:");
+		departmentList.addElement("Sales");
+		//display departments
+		Iterator deptitr=departmentList.iterator();
+		System.out.print("Department list:");
+		while(deptitr.hasNext())
+		{
+			System.out.print(deptitr.next()+"\n");
+		}
+		
+		
 		//a list is a collection of object that allows duplicates
 		listOfObjects.add(1);
 		listOfObjects.add(2);
