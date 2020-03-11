@@ -1,0 +1,64 @@
+package cmd;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Arraylist {
+	public static void main(String[] args)
+	{
+		//create hetrogeneous collection
+		List listOfObjects=new ArrayList();
+		//a list is a collection of object that allows duplicates
+		listOfObjects.add(1);
+		listOfObjects.add(2);
+		listOfObjects.add(1);
+		listOfObjects.add("Hindustan");
+		listOfObjects.add("CSE");
+		listOfObjects.add("Limited");
+		listOfObjects.add("Turnover");
+		listOfObjects.add(100000000L);
+		listOfObjects.add("Dollars");
+		System.out.println(listOfObjects);
+		
+		//remove  2nd element
+		listOfObjects.remove(1);
+		System.out.println("After removal of 2nd element, collection in memory:");
+		System.out.println(listOfObjects);
+		listOfObjects.remove(7);
+		
+		if(listOfObjects.contains("Doller"))
+		{
+			System.out.println("Turnover is in Dollars");
+		}
+		else
+		{
+			System.out.println("Turnover is not in Dollars");
+		}
+		//to display a collection invoke iterator() method frm it.
+		
+		Iterator itr = listOfObjects.iterator();
+		//display collection elements using iterator
+		
+		while(itr.hasNext())
+		{
+			Object element=itr.next();
+			if(element instanceof String)
+			{
+				System.out.println(element+" ");
+			}
+			else if(element instanceof Long)
+			{
+				System.out.println(element);
+			}else if(element instanceof Integer)			
+			{
+				System.out.println("Integer:"+element);
+			}
+		}
+		//display a collection using enhance for loop
+		System.out.println("Showing elements of Arraylist:");
+		for(Object o : listOfObjects)
+		{
+			System.out.println(0);
+		}
+	}
+}
